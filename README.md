@@ -10,6 +10,7 @@
   <img src="https://img.shields.io/badge/🏢_기관-K--water_AI연구소-0F6E8C?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/🥇_AI연구소_최초-LoRA_LM-15A0A6?style=for-the-badge"/>
   <img src="https://img.shields.io/badge/📄_데이터-공개_연구보고서_105건-2AA7C4?style=for-the-badge"/>
+  <a href="https://huggingface.co/newcave/kwater-ailab-4b-lora"><img src="https://img.shields.io/badge/🤗_Hugging_Face-모델_공개중-FFD21E?style=for-the-badge"/></a>
 </p>
 
 <p align="center">
@@ -57,7 +58,7 @@ flowchart LR
 | 📄 **학습 데이터** | 공개 연구보고서 105건의 데이터소스 레코드 → 규칙 기반 instruction 쌍 (목록 나열 · 필드 조회 · 카드 요약) |
 | ⚡ **학습 환경** | Google Colab Pro+ · NVIDIA A100 40GB · Unsloth + TRL |
 | 📦 **산출물** | LoRA 어댑터 (수십 MB) — 베이스 모델 위에 장착 |
-| 🤗 **가중치** | Hugging Face 공개 예정 |
+| 🤗 **가중치** | [huggingface.co/newcave/kwater-ailab-4b-lora](https://huggingface.co/newcave/kwater-ailab-4b-lora) ✅ 공개중 |
 
 ## 🚀 빠른 시작
 
@@ -66,7 +67,7 @@ from peft import PeftModel
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 BASE = "Qwen/Qwen3-4B-Instruct-2507"
-ADAPTER = "newcave/kwater-ailab-4b-lora"   # HF 공개 후 사용 가능
+ADAPTER = "newcave/kwater-ailab-4b-lora"   # 🤗 공개 어댑터
 
 tok = AutoTokenizer.from_pretrained(BASE)
 model = AutoModelForCausalLM.from_pretrained(BASE, torch_dtype="bfloat16", device_map="auto")
