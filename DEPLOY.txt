@@ -1,0 +1,15 @@
+[배포 절차 — c:\kwater-ailab-4b-lora 기준]
+
+1) zip 압축 해제 → 내용물을 c:\kwater-ailab-4b-lora 에 배치
+2) 로고 복사:
+   copy C:\rnddata_report\AI_Lab_logo.jpg C:\kwater-ailab-4b-lora\assets\
+3) GitHub에서 새 리포 kwater-ailab-4b-lora 생성 (Public, README 자동생성 체크 해제)
+4) PowerShell:
+   cd C:\kwater-ailab-4b-lora
+   git init
+   git add .
+   git commit -m "v0.1: first LoRA LM of K-water AI Lab"
+   git branch -M main
+   git remote add origin https://github.com/newcave/kwater-ailab-4b-lora.git
+   git push -u origin main
+5) 리포 페이지에서 배너·배지·mermaid 다이어그램 렌더 확인
